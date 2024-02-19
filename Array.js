@@ -115,3 +115,17 @@ const res = [...a, ...b];
 console.log(res);
 // using concat
 console.log(a.concat(b));
+
+// check the both arrays are equal or not.
+const isArrayEqual = (arr, arr1) => {
+  if (arr.length !== arr1.length) {
+    return false;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr1[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+console.log(isArrayEqual([1, 2, 3], [1, 2, 3]));
